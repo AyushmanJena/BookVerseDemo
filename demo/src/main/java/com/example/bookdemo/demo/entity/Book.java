@@ -2,6 +2,8 @@ package com.example.bookdemo.demo.entity;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.persistence.*;
+import jakarta.validation.constraints.Max;
+import jakarta.validation.constraints.Min;
 
 @Entity
 @Table(name = "book")
@@ -20,6 +22,8 @@ public class Book {
     private String bookAuthor;
 
     @Column(name = "book_rating")
+    @Max(value = 5, message = "cannot be more than 5")
+    @Min(value = 0, message = "cannot be less than 0")
     private int bookRating;
 
     public Book(){

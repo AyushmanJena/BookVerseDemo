@@ -1,34 +1,31 @@
-# Logs
-my-react-app/logs
+# Compiled class files
+*.class
+
+# Log files
 *.log
-my-react-app/npm-debug.log*
-my-react-app/yarn-debug.log*
-my-react-app/yarn-error.log*
 
-# Compiled binary addons (http://nodejs.org/api/addons.html)
-my-react-app/build/Release
+# Package files
+*.jar
+*.war
+*.ear
 
-# Dependency directories
-my-react-app/node_modules/
-my-react-app/jspm_packages/
+# Temporary files
+*.swp
+*~
+.DS_Store
+Thumbs.db
 
-# Distribution directories
-my-react-app/dist/
+# IDE files
+.idea/
+.classpath
+.project
+.settings/
+target/
+!.mvn/wrapper/maven-wrapper.jar
 
-# Typescript v1 declaration files
-my-react-app/typings/
+# Maven wrapper files (if you are using it)
+*.mvn/wrapper/maven-wrapper.properties
 
-# Optional npm cache directory
-my-react-app/.npm
-
-# Optional eslint cache
-my-react-app/.eslintcache
-
-# Optional REPL history
-my-react-app/.node_repl_history
-
-# Output of 'npm pack'
-my-react-app/*.tgz
-
-# Yarn Integrity file
-my-react-app/.yarn-integrity
+# Other generated files
+demo/mvnw
+demo/mvnw.cmd

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Book Verse</title>
+    <link rel="stylesheet" th:href="@{/css/book-details.css}"/>
+</head>
+<body style="padding : 50px">
+<!--<h1> Book details Page</h1>-->
+<!--    <img th:src="@{/images/protagonist-syndrome.jpg}" alt="Book Cover" width="120" height="160" style="margin-right: 20px; border-radius: 8px;">-->
+<!--    <h1  th:text="${book.bookTitle}">Book Name</h1>-->
+<!--    <p><strong>Author:</strong> <span th:text="${book.bookAuthor}">Author Name</span></p>-->
+<!--    <p><strong>Rating:</strong> <span th:text="${book.bookRating}">4.5</span></p>-->
+
+
+<div style="display: flex; align-items: center; ">
+    <img th:src="@{/images/protagonist-syndrome.jpg}" alt="Book Cover" width="240" height="320" style="margin-right: 20px; border-radius: 8px;">
+    <div>
+        <h2 th:text="${book.bookTitle}">Book Name</h2>
+        <p class="author"><strong>Author:</strong> <span th:text="${book.bookAuthor}">Author Name</span></p>
+        <p class="rating"><strong>Rating:</strong> <span th:text="${book.bookRating}">[rating]</span></p>
+
+        <br>
+
+        <div class="button-container">
+            <button>WISHLIST</button>
+            <button>BUY NOW</button>
+        </div>
+
+        <br>
+
+        <p>This book tells you the story of how the narrator can fight against anything that comes in his way. The state of mind which makes
+            you believe that you are the main character i.e. the protagonist of the story and you won't be defeated no matter what comes in
+            the way. </p>
+    </div>
+</div>
+
+<!--book recommendations dummy-->
+
+<br><br>
+
+<h2>SIMILAR BOOKS :</h2>
+<div class="books-container" >
+
+    <div class="book-card">
+        <img th:src="@{/images/protagonist-syndrome.jpg}" alt="Book Cover" width="120" height="160" style="margin-right: 20px; border-radius: 8px;">
+        <h2>Protagonist Syndrome</h2>
+        <p class="author"><strong>Author:</strong> <span>Sankho Kun</span></p>
+        <p class="rating"><strong>Rating:</strong> <span>4.5</span></p>
+    </div>
+    <div class="book-card">
+        <img th:src="@{/images/protagonist-syndrome.jpg}" alt="Book Cover" width="120" height="160" style="margin-right: 20px; border-radius: 8px;">
+        <h2>Protagonist Syndrome</h2>
+        <p class="author"><strong>Author:</strong> <span>Sankho Kun</span></p>
+        <p class="rating"><strong>Rating:</strong> <span>4.5</span></p>
+    </div>
+
+    <div class="book-card">
+        <img th:src="@{/images/protagonist-syndrome.jpg}" alt="Book Cover" width="120" height="160" style="margin-right: 20px; border-radius: 8px;">
+        <h2>Protagonist Syndrome</h2>
+        <p class="author"><strong>Author:</strong> <span>Sankho Kun</span></p>
+        <p class="rating"><strong>Rating:</strong> <span>4.5</span></p>
+    </div>
+
+    <div class="book-card">
+        <img th:src="@{/images/protagonist-syndrome.jpg}" alt="Book Cover" width="120" height="160" style="margin-right: 20px; border-radius: 8px;">
+        <h2>Protagonist Syndrome</h2>
+        <p class="author"><strong>Author:</strong> <span>Sankho Kun</span></p>
+        <p class="rating"><strong>Rating:</strong> <span>4.5</span></p>
+    </div>
+
+    <div class="book-card">
+        <img th:src="@{/images/protagonist-syndrome.jpg}" alt="Book Cover" width="120" height="160" style="margin-right: 20px; border-radius: 8px;">
+        <h2>Protagonist Syndrome</h2>
+        <p class="author"><strong>Author:</strong> <span>Sankho Kun</span></p>
+        <p class="rating"><strong>Rating:</strong> <span>4.5</span></p>
+    </div>
+
+</div>
+
+
+
+</body>
+</html>
