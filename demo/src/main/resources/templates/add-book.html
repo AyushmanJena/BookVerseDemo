@@ -3,21 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <title>Add Book</title>
+
+    <style>
+        .error{
+            color : red
+        }
+    </style>
+
 </head>
 <body>
 <h3>ADD A NEW BOOK : </h3>
-
-<!--<form>-->
-<!--    Name : <input type = "text">-->
-<!--    Class : <input type = "text">-->
-<!--</form>-->
 
 <form th:action = "@{/addBook}" th:object="${book}" method="POST" >
     Book Title : <input type ="text" th:field="*{bookTitle}"/>
     <br><br>
     Author Name : <input type ="text" th:field="*{bookAuthor}"/>
     <br><br>
-    Rating : <input type = "text" th:field="*bookRating">
+    Rating : <input type = "number" th:field="*{bookRating}" >
+<!--    show error if book rating more than not within range-->
+    <span th:if="${#fields.hasErrors('bookRating')}"
+          th:errors="*{bookRating}"
+          class="error">
+    </span>
     <br><br>
 <!--    Genre : <input type ="text"/>-->
     <br><br>

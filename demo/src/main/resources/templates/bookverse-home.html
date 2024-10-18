@@ -1,15 +1,63 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Book Verse</title>
     <link rel="stylesheet" th:href="@{/css/home.css}"/>
+
+    <style>
+        header {
+            display: flex;
+            justify-content: center; /* Centers the content horizontally */
+            align-items: center;     /* Vertically aligns the content */
+            padding: 20px;
+            background-color: "#007bff"; /* Changed back to light blue */
+            border-bottom: 1px solid #ccc; /* Optional: header bottom border */
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between; /* Distributes space between the h1 and the button */
+            align-items: center; /* Aligns the text and button vertically */
+            width: 100%; /* Ensures the content takes full width of the header */
+            max-width: 1200px; /* Optional: set max width to center content in larger screens */
+        }
+
+        h1 {
+            margin: 0;
+            text-align: left;
+            flex-grow: 1; /* Ensures the h1 takes available space for centering */
+        }
+
+        .logout-button {
+            background-color: red;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+
+        .logout-button:hover {
+            background-color: darkred;
+        }
+
+    </style>
 </head>
 <body>
 <header>
-    <h1>Book Verse</h1>
+    <span class="header-container">
+        <h1>Book Verse</h1>
+        <form action="#" th:action="@{/logout}" method="POST">
+            <input type="submit" value="LOGOUT" class="logout-button" />
+        </form>
+    </span>
 </header>
+
 <main>
     <div class="books-container">
         <!-- Loop through the list of books -->
@@ -28,8 +76,8 @@
         </div>
     </div>
 
-    <!-- Add New Book Button -->
-    <div style="margin-top: 20px; text-align: center;">
+    <!-- Add New Book Button only admins can access -->
+    <div sec:authorize="hasRole('ADMIN')" style="margin-top: 20px; text-align: center;">
         <a th:href="@{/addBook}" style="text-decoration: none;">
             <button style="background-color: #007bff; color: white; padding: 10px 20px; font-size: 18px; border: none; border-radius: 5px; cursor: pointer;">
                 Add New Book

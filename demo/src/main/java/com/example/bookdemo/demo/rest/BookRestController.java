@@ -52,35 +52,13 @@ public class BookRestController {
 
     @PostMapping("/addBook")
     public String processForm(
-            @Valid @ModelAttribute("book") Book theBook, Model model) {
-
+            @Valid @ModelAttribute("book") Book theBook, BindingResult theBindingResult) {
+        if(theBindingResult.hasErrors()){
+            return "add-book";
+        }
         theBook.setBookId(0); // Ensure this is a new book
         bookService.save(theBook);
-
-        System.out.println(theBook.getBookId()); // log the new book
-
+        System.out.println("Added book : " + theBook.getBookId()); // log the new book
         return "redirect:/books";
     }
-
-
-//    @PutMapping("/books")
-//    public Book updateBook(@RequestBody Book theBook){
-//        Book dbBook = bookService.save(theBook);
-//        return dbBook;
-//    }
-//
-//    @DeleteMapping("/books/{bookId}")
-//    public String deleteBook(@PathVariable int bookId){
-//        Book tempBook = bookService.findById(bookId);
-//
-//        // throw exception if null
-//
-//        if(tempBook == null){
-//            throw new RuntimeException("Book id not found : "+ bookId);
-//        }
-//
-//        bookService.deleteById(bookId);
-//        return "Deleted Book : "+ bookId;
-//    }
-
 }

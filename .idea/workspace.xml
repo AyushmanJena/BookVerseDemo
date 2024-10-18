@@ -6,30 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="f90f4182-8da0-4fd1-b985-574429a68f88" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/demo/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/demo/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/src/main/java/com/example/bookdemo/demo/BookdemoApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/demo/src/main/java/com/example/bookdemo/demo/BookdemoApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/src/main/java/com/example/bookdemo/demo/WebConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/src/main/java/com/example/bookdemo/demo/dao/BookRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/demo/src/main/java/com/example/bookdemo/demo/dao/BookRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/demo/src/main/java/com/example/bookdemo/demo/entity/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/demo/src/main/java/com/example/bookdemo/demo/entity/Book.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/demo/src/main/java/com/example/bookdemo/demo/rest/BookRestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/demo/src/main/java/com/example/bookdemo/demo/rest/BookRestController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/src/main/java/com/example/bookdemo/demo/security/SecurityConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/demo/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-react-app/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-react-app/package-lock.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-react-app/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-react-app/public/favicon.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-react-app/public/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-react-app/public/logo192.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-react-app/public/logo512.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-react-app/public/manifest.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-react-app/public/robots.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-react-app/src/App.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-react-app/src/App.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-react-app/src/App.test.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-react-app/src/index.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-react-app/src/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-react-app/src/logo.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-react-app/src/reportWebVitals.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-react-app/src/setupTests.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/src/main/resources/templates/add-book.html" beforeDir="false" afterPath="$PROJECT_DIR$/demo/src/main/resources/templates/add-book.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/src/main/resources/templates/bookverse-home.html" beforeDir="false" afterPath="$PROJECT_DIR$/demo/src/main/resources/templates/bookverse-home.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,14 +52,16 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/Book Demo&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/NSFW/SPRING BOOT/dev-spring-boot/08-spring-boot-spring-mvc-security/01-spring-boot-spring-mvc-security&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;
   }
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\Book Demo\demo\src\main\resources\static\css" />
       <recent name="D:\Book Demo\demo\src\main\resources\templates" />
+      <recent name="D:\Book Demo\demo\src\main\resources\templates\security" />
+      <recent name="D:\Book Demo\demo\src\main\resources\templates\systems" />
+      <recent name="D:\Book Demo\demo\src\main\resources\static\css" />
     </key>
   </component>
   <component name="RunManager">

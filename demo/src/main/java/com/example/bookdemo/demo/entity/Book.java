@@ -4,6 +4,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Max;
 import jakarta.validation.constraints.Min;
+import jakarta.validation.constraints.NotNull;
 
 @Entity
 @Table(name = "book")
@@ -22,8 +23,9 @@ public class Book {
     private String bookAuthor;
 
     @Column(name = "book_rating")
-    @Max(value = 5, message = "cannot be more than 5")
-    @Min(value = 0, message = "cannot be less than 0")
+    @NotNull(message = "Rating is required")
+    @Min(value = 0, message = "Rating cannot be less than 0")
+    @Max(value = 5, message = "Rating cannot be more than 5")
     private int bookRating;
 
     public Book(){
