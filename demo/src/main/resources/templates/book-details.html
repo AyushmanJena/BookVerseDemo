@@ -14,7 +14,7 @@
 
 
 <div style="display: flex; align-items: center; ">
-    <img th:src="@{/images/protagonist-syndrome.jpg}" alt="Book Cover" width="240" height="320" style="margin-right: 20px; border-radius: 8px;">
+    <img th:src="${book.bookCoverLink}" alt="Book Cover" width="240" height="320" style="margin-right: 20px; border-radius: 8px;">
     <div>
         <h2 th:text="${book.bookTitle}">Book Name</h2>
         <p class="author"><strong>Author:</strong> <span th:text="${book.bookAuthor}">Author Name</span></p>

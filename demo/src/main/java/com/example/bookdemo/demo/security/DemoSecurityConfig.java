@@ -48,7 +48,7 @@ public class DemoSecurityConfig {
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception{
         http.authorizeHttpRequests(configure ->
                 configure
-                        //.requestMatchers("/", "/bookverse-home", "/book-details").permitAll()
+                        .requestMatchers("/","/books", "book-details/**", "/css/**", "/images/**").permitAll()
                         .requestMatchers("/systems/**").hasRole("ADMIN")
                         .anyRequest().authenticated()
         )
@@ -58,13 +58,13 @@ public class DemoSecurityConfig {
                         .loginProcessingUrl("/authenticateTheUser")
                         .permitAll()
         )
-        .logout(logout -> logout.permitAll())
+        .logout(logout -> logout
+                .permitAll()
+                .logoutSuccessUrl("/"))
                 .exceptionHandling(configurer ->
                         configurer.accessDeniedPage("/access-denied")
         );
 
         return http.build();
     }
-
-
 }

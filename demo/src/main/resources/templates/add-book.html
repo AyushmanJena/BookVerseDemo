@@ -16,15 +16,29 @@
 
 <form th:action = "@{/addBook}" th:object="${book}" method="POST" >
     Book Title : <input type ="text" th:field="*{bookTitle}"/>
+    <span th:if="${#fields.hasErrors('bookTitle')}"
+          th:errors="*{bookTitle}"
+          class="error">
+    </span>
     <br><br>
     Author Name : <input type ="text" th:field="*{bookAuthor}"/>
+    <span th:if="${#fields.hasErrors('bookAuthor')}"
+          th:errors="*{bookAuthor}"
+          class="error">
+    </span>
     <br><br>
     Rating : <input type = "number" th:field="*{bookRating}" >
+
 <!--    show error if book rating more than not within range-->
     <span th:if="${#fields.hasErrors('bookRating')}"
           th:errors="*{bookRating}"
           class="error">
     </span>
+
+    <br><br>
+
+    Book Cover Image (link) : <input type ="text" th:field="*{bookCoverLink}"/>
+
     <br><br>
 <!--    Genre : <input type ="text"/>-->
     <br><br>

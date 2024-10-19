@@ -10,7 +10,6 @@ import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
-
 import java.util.Collections;
 import java.util.List;
 
@@ -58,7 +57,7 @@ public class BookRestController {
         }
         theBook.setBookId(0); // Ensure this is a new book
         bookService.save(theBook);
-        System.out.println("Added book : " + theBook.getBookId()); // log the new book
+        System.out.println("Added book : " + theBook.toString()); // log the new book
         return "redirect:/books";
     }
 }

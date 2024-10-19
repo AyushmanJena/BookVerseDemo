@@ -5,7 +5,8 @@ CREATE TABLE book_reviews.book (
     book_rating INT,                         -- Rating for the book
     book_author VARCHAR(255),                -- Author of the book
     book_title VARCHAR(255),                 -- Title of the book
-    book_cover_photo BLOB,                   -- Stores the cover photo as a binary object
+-- book_cover_photo BLOB,                    Stores the cover photo as a binary object
+	book_cover_link VARCHAR(255),                   -- Stores the cover photo as a binary object
     similar_1 INT,                           -- Similar book 1 (foreign key or reference)
     similar_2 INT,                           -- Similar book 2 (foreign key or reference)
     similar_3 INT,                           -- Similar book 3 (foreign key or reference)

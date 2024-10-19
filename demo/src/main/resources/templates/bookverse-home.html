@@ -52,9 +52,18 @@
 <header>
     <span class="header-container">
         <h1>Book Verse</h1>
-        <form action="#" th:action="@{/logout}" method="POST">
-            <input type="submit" value="LOGOUT" class="logout-button" />
-        </form>
+
+        <div sec:authorize="isAnonymous()">
+            <a th:href="@{/plain-login}">
+                <button class="logout-button">Login</button>
+            </a>
+        </div>
+
+        <div sec:authorize="isAuthenticated()">
+            <form action="#" th:action="@{/logout}" method="POST">
+                <input type="submit" value="LOGOUT" class="logout-button" />
+            </form>
+        </div>
     </span>
 </header>
 
@@ -65,7 +74,7 @@
             <!-- Make the entire book card clickable by wrapping in an <a> tag -->
             <a th:href="@{'/book-details/' + ${book.bookId}}" style="text-decoration: none; color: inherit; display: block;">
                 <div style="align-items: center;">
-                    <img th:src="@{/images/protagonist-syndrome.jpg}" alt="Book Cover" width="120" height="160" style="margin-right: 20px; border-radius: 8px;">
+                    <img th:src="${book.bookCoverLink}" alt="Book Cover" width="120" height="160" style="margin-right: 20px; border-radius: 8px;">
                     <div>
                         <h2 th:text="${book.bookTitle}">Book Name</h2>
                         <p class="author"><strong>Author:</strong> <span th:text="${book.bookAuthor}">Author Name</span></p>
