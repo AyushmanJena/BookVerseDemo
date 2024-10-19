@@ -1,10 +1,14 @@
 package com.example.bookdemo.demo.security;
 
+import com.example.bookdemo.demo.service.BookService;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.security.authentication.dao.DaoAuthenticationProvider;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.provisioning.InMemoryUserDetailsManager;
 import org.springframework.security.provisioning.JdbcUserDetailsManager;
 import org.springframework.security.provisioning.UserDetailsManager;
@@ -48,7 +52,7 @@ public class DemoSecurityConfig {
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception{
         http.authorizeHttpRequests(configure ->
                 configure
-                        .requestMatchers("/","/books", "book-details/**", "/css/**", "/images/**").permitAll()
+                        .requestMatchers("/","/books", "book-details/**", "/css/**", "/images/**", "/register/**").permitAll()
                         .requestMatchers("/systems/**").hasRole("ADMIN")
                         .anyRequest().authenticated()
         )
@@ -67,4 +71,13 @@ public class DemoSecurityConfig {
 
         return http.build();
     }
+
+//    @Bean
+//    public PasswordEncoder passwordEncoder() {
+//        return new BCryptPasswordEncoder();
+//    }
+
+
+
+
 }
