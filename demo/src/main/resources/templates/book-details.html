@@ -6,12 +6,6 @@
     <link rel="stylesheet" th:href="@{/css/book-details.css}"/>
 </head>
 <body style="padding : 50px">
-<!--<h1> Book details Page</h1>-->
-<!--    <img th:src="@{/images/protagonist-syndrome.jpg}" alt="Book Cover" width="120" height="160" style="margin-right: 20px; border-radius: 8px;">-->
-<!--    <h1  th:text="${book.bookTitle}">Book Name</h1>-->
-<!--    <p><strong>Author:</strong> <span th:text="${book.bookAuthor}">Author Name</span></p>-->
-<!--    <p><strong>Rating:</strong> <span th:text="${book.bookRating}">4.5</span></p>-->
-
 
 <div style="display: flex; align-items: center; ">
     <img th:src="${book.bookCoverLink}" alt="Book Cover" width="240" height="320" style="margin-right: 20px; border-radius: 8px;">
@@ -42,41 +36,21 @@
 <h2>SIMILAR BOOKS :</h2>
 <div class="books-container" >
 
-    <div class="book-card">
-        <img th:src="@{/images/protagonist-syndrome.jpg}" alt="Book Cover" width="120" height="160" style="margin-right: 20px; border-radius: 8px;">
-        <h2>Protagonist Syndrome</h2>
-        <p class="author"><strong>Author:</strong> <span>Sankho Kun</span></p>
-        <p class="rating"><strong>Rating:</strong> <span>4.5</span></p>
-    </div>
-    <div class="book-card">
-        <img th:src="@{/images/protagonist-syndrome.jpg}" alt="Book Cover" width="120" height="160" style="margin-right: 20px; border-radius: 8px;">
-        <h2>Protagonist Syndrome</h2>
-        <p class="author"><strong>Author:</strong> <span>Sankho Kun</span></p>
-        <p class="rating"><strong>Rating:</strong> <span>4.5</span></p>
-    </div>
+    <div class="books-container">
 
-    <div class="book-card">
-        <img th:src="@{/images/protagonist-syndrome.jpg}" alt="Book Cover" width="120" height="160" style="margin-right: 20px; border-radius: 8px;">
-        <h2>Protagonist Syndrome</h2>
-        <p class="author"><strong>Author:</strong> <span>Sankho Kun</span></p>
-        <p class="rating"><strong>Rating:</strong> <span>4.5</span></p>
+        <div th:each="similarBook : ${similarBooks}" class="book-card">
+            <a th:href="@{'/book-details/' + ${similarBook.bookId}}" style="text-decoration: none; color: inherit; display: block;">
+                <div style="align-items: center;">
+                    <img th:src="${similarBook.bookCoverLink}" alt="Book Cover" width="120" height="160" style="margin-right: 20px; border-radius: 8px;">
+                    <div>
+                        <h2 th:text="${similarBook.bookTitle}">Book Name</h2>
+                        <p class="author"><strong>Author:</strong> <span th:text="${similarBook.bookAuthor}">Author Name</span></p>
+                        <p class="rating"><strong> ⭐ </strong> <span th:text="${similarBook.bookRating}">[rating]</span></p>
+                    </div>
+                </div>
+            </a>
+        </div>
     </div>
-
-    <div class="book-card">
-        <img th:src="@{/images/protagonist-syndrome.jpg}" alt="Book Cover" width="120" height="160" style="margin-right: 20px; border-radius: 8px;">
-        <h2>Protagonist Syndrome</h2>
-        <p class="author"><strong>Author:</strong> <span>Sankho Kun</span></p>
-        <p class="rating"><strong>Rating:</strong> <span>4.5</span></p>
-    </div>
-
-    <div class="book-card">
-        <img th:src="@{/images/protagonist-syndrome.jpg}" alt="Book Cover" width="120" height="160" style="margin-right: 20px; border-radius: 8px;">
-        <h2>Protagonist Syndrome</h2>
-        <p class="author"><strong>Author:</strong> <span>Sankho Kun</span></p>
-        <p class="rating"><strong>Rating:</strong> <span>4.5</span></p>
-    </div>
-
-</div>
 
 
 
