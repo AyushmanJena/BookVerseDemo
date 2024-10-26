@@ -52,7 +52,7 @@ public class DemoSecurityConfig {
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception{
         http.authorizeHttpRequests(configure ->
                 configure
-                        .requestMatchers("/","/books", "book-details/**", "/css/**", "/images/**", "/register/**").permitAll()
+                        .requestMatchers("/","/books", "book-details/**", "/css/**", "/images/**", "/register/**", "/actuator/**").permitAll()
                         .requestMatchers("/systems/**").hasRole("ADMIN")
                         .anyRequest().authenticated()
         )
@@ -68,6 +68,7 @@ public class DemoSecurityConfig {
                 .exceptionHandling(configurer ->
                         configurer.accessDeniedPage("/access-denied")
         );
+        http.csrf(csrf -> csrf.disable());
 
         return http.build();
     }

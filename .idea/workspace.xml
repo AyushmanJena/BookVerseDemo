@@ -5,14 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f90f4182-8da0-4fd1-b985-574429a68f88" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/BOOKVERSE.xlsx" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/demo/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/demo/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/src/main/java/com/example/bookdemo/demo/BookdemoApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/demo/src/main/java/com/example/bookdemo/demo/BookdemoApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/src/main/java/com/example/bookdemo/demo/entity/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/demo/src/main/java/com/example/bookdemo/demo/entity/Book.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/src/main/java/com/example/bookdemo/demo/rest/BookRestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/demo/src/main/java/com/example/bookdemo/demo/rest/BookRestController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/src/main/java/com/example/bookdemo/demo/service/BookService.java" beforeDir="false" afterPath="$PROJECT_DIR$/demo/src/main/java/com/example/bookdemo/demo/service/BookService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/src/main/java/com/example/bookdemo/demo/service/BookServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/demo/src/main/java/com/example/bookdemo/demo/service/BookServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/src/main/resources/templates/book-details.html" beforeDir="false" afterPath="$PROJECT_DIR$/demo/src/main/resources/templates/book-details.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/src/main/java/com/example/bookdemo/demo/security/DemoSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/demo/src/main/java/com/example/bookdemo/demo/security/DemoSecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/demo/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,8 +18,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
-        <option value="HTML File" />
         <option value="Class" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -41,7 +36,7 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="CurrentFile" />
+    <option name="selectedTabId" value="DEPENDENCY_CHECKER_PROBLEMS_TAB" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 2
@@ -60,7 +55,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "user-registration",
-    "last_opened_file_path": "D:/NSFW/SPRING BOOT/dev-spring-boot/09-spring-boot-jpa-advanced-mappings/07-jpa-one-to-many-create-instructor-with-courses",
+    "last_opened_file_path": "D:/NSFW/SPRING BOOT/dev-spring-boot/06-spring-boot-spring-mvc/01-thymeleafdemo-helloworld",
     "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings"
   }
 }]]></component>
@@ -89,6 +84,8 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.BookdemoApplication" />
+        <item itemvalue="Application.BookdemoApplication" />
+        <item itemvalue="Application.BookdemoApplication" />
       </list>
     </recent_temporary>
   </component>
@@ -102,8 +99,5 @@
       <updated>1725615342814</updated>
     </task>
     <servers />
-  </component>
-  <component name="UnknownFeatures">
-    <option featureType="com.intellij.fileTypeFactory" implementationName="*.py" />
   </component>
 </project>
