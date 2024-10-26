@@ -10,6 +10,8 @@ import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
+
+import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
@@ -38,7 +40,10 @@ public class BookRestController {
         if (theBook == null) {
             throw new RuntimeException("Book not found: " + bookId);
         }
+        // Fetch similar books
+        List<Book> similarBooks = bookService.findAllById(theBook);
         model.addAttribute("book", theBook); // Add the book to the model
+        model.addAttribute("similarBooks", similarBooks);
         return "book-details"; // Return the name of the Thymeleaf template (book-detail.html)
     }
 
