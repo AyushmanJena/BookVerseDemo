@@ -11,11 +11,10 @@ import com.example.bookdemo.demo.entity.Book;
 
 @SpringBootApplication
 public class BookdemoApplication {
-
 	public static void main(String[] args) {
 		SpringApplication.run(BookdemoApplication.class, args);
 		try{
-			ProcessBuilder pb = new ProcessBuilder("python3", "demo/BookRecommendation/main.py");
+			ProcessBuilder pb = new ProcessBuilder("python3", "demo/src/python-scripts/main.py");
 			Process p = pb.start();
 
 			BufferedReader reader = new BufferedReader(new InputStreamReader(p.getInputStream()));
@@ -24,16 +23,8 @@ public class BookdemoApplication {
 				System.out.println(line);
 			}
 		}catch (Exception e){
+			System.out.println("Recommendations not loading");
 			e.printStackTrace();
 		}
 	}
-
-// using jython
-//	public static void main(String[] args) {
-//		SpringApplication.run(BookdemoApplication.class, args);
-//		System.out.println("hello");
-//		PythonInterpreter interpreter = new PythonInterpreter();
-//		//interpreter.execfile("demo/src/main/resources/helloWorld.py");
-//		interpreter.execfile("demo/python-model/model-to-book-table.py");
-//	}
 }
