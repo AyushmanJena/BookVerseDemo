@@ -2,12 +2,16 @@
 # BookVerse
 
 Simple Spring Boot application for a list of books.
-Reviews system yet to be added.
 Uses thymeleaf template for frontend.
+Integrated MySQL database. 
+Spring Security for user Authentication.
 Basic Python script for recommendations engine.
 
-### Home page
+### Home Page
 ![image info](./screenshots/home.png)
+
+### Book Details Page
+![image info](./screenshots/book-details.png)
 
 ### Login page
 ![image info](./screenshots/login.png)
